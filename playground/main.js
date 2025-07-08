@@ -25,16 +25,24 @@ scene.add( mesh2 );
 const mesh0 = 
   new THREE.Mesh(
     new THREE.SphereGeometry(0.7),
-    new THREE.MeshNormalMaterial()
+    new THREE.MeshLambertMaterial()
   );
 mesh0.position.set(-3, 0, 0);
 scene.add( mesh0 );
 
 // light
 const pointLight = new THREE.PointLight();
-pointLight.intensity = 500;
+pointLight.intensity = 200;
 pointLight.position.set(0, 8, 4);
 scene.add(pointLight);
+
+// const light2 = new THREE.AmbientLight(0xff0000);
+// const light2 = new THREE.AmbientLight("green");
+// const light2 = new THREE.AmbientLight(new THREE.Color(0,0,1));
+// const light2 = new THREE.AmbientLight(new THREE.Color(0xffff00));
+// const light2 = new THREE.AmbientLight(new THREE.Color("cyan"));
+// const light2 = new THREE.AmbientLight(new THREE.Color(new THREE.Color(1,0,1)));
+// scene.add(light2);
 
 // camera
 const camera = new THREE.PerspectiveCamera( 70, width / height, 0.1, 100 );
