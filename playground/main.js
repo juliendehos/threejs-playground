@@ -36,13 +36,15 @@ pointLight.intensity = 200;
 pointLight.position.set(0, 8, 4);
 scene.add(pointLight);
 
-// const light2 = new THREE.AmbientLight(0xff0000);
-// const light2 = new THREE.AmbientLight("green");
-// const light2 = new THREE.AmbientLight(new THREE.Color(0,0,1));
-// const light2 = new THREE.AmbientLight(new THREE.Color(0xffff00));
-// const light2 = new THREE.AmbientLight(new THREE.Color("cyan"));
-// const light2 = new THREE.AmbientLight(new THREE.Color(new THREE.Color(1,0,1)));
-// scene.add(light2);
+const light1 = new THREE.AmbientLight(0xff0000);
+const light2 = new THREE.AmbientLight("green");
+const light3 = new THREE.AmbientLight(new THREE.Color(0,0,1));
+const light4 = new THREE.AmbientLight(new THREE.Color(0xffff00));
+const light5 = new THREE.AmbientLight(new THREE.Color("cyan"));
+const light6 = new THREE.AmbientLight(new THREE.Color(new THREE.Color(1,0,1)));
+// const light7 = new THREE.AmbientLight(1,1,1);  // not allowed
+// const light8 = new THREE.AmbientLight((1,0,0));  // not allowed
+scene.add(light6);
 
 // camera
 const camera = new THREE.PerspectiveCamera( 70, width / height, 0.1, 100 );
