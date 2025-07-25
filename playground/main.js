@@ -61,8 +61,13 @@ const controls = new OrbitControls( camera, renderer.domElement );
 controls.update();
 
 // stats
-const stats = new Stats();
-document.body.appendChild( stats.dom );
+const stats1 = new Stats();
+stats1.dom.style.left = '300px';
+document.body.appendChild( stats1.dom );
+const stats2 = new Stats();
+stats2.showPanel(1);
+stats2.dom.style.left = '400px';
+document.body.appendChild( stats2.dom );
 
 // animation
 function animate( time ) {
@@ -76,6 +81,7 @@ function animate( time ) {
 
 	renderer.render( scene, camera );
   
-  stats.update();
+  stats1.update();
+  stats2.update();
 }
 
