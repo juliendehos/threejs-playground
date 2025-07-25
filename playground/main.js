@@ -1,7 +1,7 @@
 
 import * as THREE from 'three';
-
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import Stats from 'three/addons/libs/stats.module.js';
 
 const width = window.innerWidth, height = window.innerHeight;
 
@@ -60,6 +60,10 @@ document.body.appendChild( renderer.domElement );
 const controls = new OrbitControls( camera, renderer.domElement );
 controls.update();
 
+// stats
+const stats = new Stats();
+document.body.appendChild( stats.dom );
+
 // animation
 function animate( time ) {
 	mesh1.rotation.y = time / 1000;
@@ -71,5 +75,7 @@ function animate( time ) {
   */
 
 	renderer.render( scene, camera );
+  
+  stats.update();
 }
 
